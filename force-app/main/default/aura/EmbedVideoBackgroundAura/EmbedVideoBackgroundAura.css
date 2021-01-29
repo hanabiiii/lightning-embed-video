@@ -1,0 +1,20 @@
+.THIS {
+}
+
+.THIS.embed-video-bg-container {
+    position: relative;
+}
+
+.THIS .video-gb-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS .video-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}

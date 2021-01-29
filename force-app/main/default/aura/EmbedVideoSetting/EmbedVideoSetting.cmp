@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable" access="global" controller="EmbedVideoSettingController">
+    <aura:attribute name="googleApiKey" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+	
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:connected_apps" size="small"/>
+            Video Embed Setting
+        </aura:set>
+    </lightning:card>
+    
+    <lightning:card>
+        <lightning:tabset selectedTabId="youtube">
+            <lightning:tab label="Youtube" id="youtube">
+                <div class="slds-grid slds-grid_vertical slds-m-horizontal_small">
+                	<div class="slds-col">
+                    	<lightning:input name="googleApiKey" label="Google Api Key" value="{!v.googleApiKey}" />
+                    </div>
+                	<div class="slds-col slds-m-top_small">
+                    	<lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleSaveGoogleApiKey }" />
+                    </div>
+                </div>
+            </lightning:tab>
+    </lightning:tabset>
+    </lightning:card>
+    
+</aura:component>

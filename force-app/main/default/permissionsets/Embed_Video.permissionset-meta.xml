@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Lightning_Embed_Video</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Embed Video</label>
+    <tabSettings>
+        <tab>Embed_Video_Setting</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="youtubeEmbedVideo">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Youtube Embed Video</masterLabel>
+    <description>Youtube Embed Video</description>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default, lightning__AppPage, lightning__RecordPage, lightning__HomePage">
+            <property name="isCommunity" label="Add card boundary" type="Boolean" />
+            <property name="embedType" label="Embed Type" type="String" default="video" datasource="video,playlist"/>
+            <property name="videoType" label="Show Video In" type="String" default="container" datasource="container,modal" description="Show video in modal is supported for playlist only"/>
+            <property name="videoId" label="Video Id" type="String"/>
+            <property name="playlistId" label="Playlist Id" type="String"/>
+            <property name="playlistTitle" label="Playlist Title" type="String"/>
+            <property name="showToolBar" label="Show Tools Bar" type="Boolean" default="true"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

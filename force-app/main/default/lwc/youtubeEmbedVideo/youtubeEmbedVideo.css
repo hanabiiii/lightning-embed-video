@@ -1,0 +1,82 @@
+.youtube-embed-video_container {
+    position: relative;
+    z-index: 1;
+}
+.embed-video-component {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+c-youtube-embed-video-player {
+    width: 100%;
+    height: 100%;
+}
+/* player */
+.embed-video_player {
+    flex-grow: 1;
+    width: 426px;
+    min-height: 240px;
+    position: relative;
+}
+.embed-video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.embed-video-container:empty {
+    background: #000000;
+}
+.embed-video-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+}
+.embed-video-container iframe[data-src=""] {
+    background: #000000;
+}
+/* playlist */
+.embed-video_playlist {
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    min-height: 50px;
+}
+.embed-video_playlist .slds-nav-vertical__title,
+.embed-video_playlist .actions-bar {
+    background: #ffffff;
+}
+.embed-video_playlist ul {
+    max-height: 360px;
+}
+.slds-nav-vertical__action .slds-media {
+    pointer-events: none;
+    overflow: hidden;
+}
+.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action {
+    font-weight: unset !important;
+}
+.slds-nav-vertical__item .slds-media .slds-avatar {
+    width: 72px;
+    height: 42px;
+}
+.slds-nav-vertical__item .slds-media .slds-avatar img {
+    margin-top: -6px;
+}
+.slds-nav-vertical__item.show-more:hover:before {
+    background: transparent;
+}
+
+/* 768px and up */
+@media (min-width: 768px) {
+    .embed-video_player {
+        max-width: 640px;
+        min-height: 360px;
+    }
+    .embed-video_playlist {
+        max-width: 640px;
+    }
+}

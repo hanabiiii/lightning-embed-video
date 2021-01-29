@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/embedVideoUtils": [
+                "embedVideoUtils/embedVideoUtils.js"
+            ],
+            "c/embedVideoBackground": [
+                "embedVideoBackground/embedVideoBackground.js"
+            ],
+            "c/youtubeEmbedVideo": [
+                "youtubeEmbedVideo/youtubeEmbedVideo.js"
+            ],
+            "c/youtubeEmbedVideoPlayer": [
+                "youtubeEmbedVideoPlayer/youtubeEmbedVideoPlayer.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

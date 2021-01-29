@@ -1,0 +1,15 @@
+<template>
+    <template if:true={videoId}>
+        <div class="playerWrapper" lwc:dom="manual"></div>
+    </template>
+    <template if:false={videoId}>
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center" style="height: 100%;">
+            <img src={logoSrc} class="logo">
+        </div>
+    </template>
+    <template if:true={hasError}>
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center" style="height: 100%;">
+            <p class="slds-text-color_destructive">{errorMsg}</p>
+        </div>
+    </template>
+</template>

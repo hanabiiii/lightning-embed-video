@@ -1,0 +1,10 @@
+.playerWrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    max-width: 250px;
+    max-height: 250px;
+}

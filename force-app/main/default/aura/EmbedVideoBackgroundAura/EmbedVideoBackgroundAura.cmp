@@ -1,0 +1,33 @@
+<aura:component access="global" >
+    
+    <aura:attribute name="embedVideoType" type="String" default="youtube" access="global" />
+    <aura:attribute name="videoId" type="String" access="global" />
+    <aura:attribute name="height" type="Integer" access="global" />
+    <aura:attribute name="width" type="Integer" access="global" />
+    
+    <aura:attribute name="content" type="Aura.component[]" />
+    
+    <aura:attribute name="containerStyles" type="String" />
+    <aura:attribute name="youtubeEmbedSrc" type="String" />
+    
+    <aura:method name="pauseVideo" action="{!c.handlePauseVideo}" />
+    <aura:method name="playVideo" action="{!c.handlePlayVideo}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="embed-video-bg-container" style="{!v.containerStyles}">
+
+        <div class="video-gb-wrapper">
+            
+            <aura:if isTrue="{!equals('youtube', v.embedVideoType)}">
+                <iframe id="youtubePlayer" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        src="{!v.youtubeEmbedSrc}" ></iframe>
+            </aura:if>
+            
+        </div>
+        
+        <div class="video-content">
+            {!v.content}
+        </div>
+        
+    </div>
+</aura:component>

@@ -1,0 +1,17 @@
+.embed-video-bg-container {
+    position: relative;
+}
+
+.video-gb-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.video-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
